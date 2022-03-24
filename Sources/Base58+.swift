@@ -46,7 +46,7 @@ extension Base58Plus: Base58PlusEncoding {
     /// Encode Data to Base58+ String
     /// - Parameter data: Input Data bytes
     /// - Returns: Base58+ Encoded String
-    public func encode(_ data: Data) -> String {
+    public static func encode(_ data: Data) -> String {
         var answer = [UInt8]()
         var integerBytes = BigUInt(data)
 
@@ -68,7 +68,7 @@ extension Base58Plus: Base58PlusDecoding {
     /// Decode a Base58+ String to Data
     /// - Parameter string: Input Base58+ encoded string
     /// - Returns: Decoded bytes
-    public func decode(_ string: String) throws -> Data {
+    public static func decode(_ string: String) throws -> Data {
         var answer = BigUInt(0)
         var i = BigUInt(1)
 
