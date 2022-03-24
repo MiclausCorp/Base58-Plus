@@ -2,6 +2,7 @@
 
 A Swift implementation of the MiclausCorp Base58+ Encoding Algorithm.
 
+[![Build](https://github.com/MiclausCorp/Base58-Plus/actions/workflows/swift.yml/badge.svg)](https://github.com/MiclausCorp/Base58-Plus/actions/workflows/swift.yml)
 [![Get on SPM](https://img.shields.io/badge/Available%20on-Swift%20Package%20Manager-orange?logo=swift)](#installation)
 
 ## Installation
