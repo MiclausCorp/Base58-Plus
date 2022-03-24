@@ -44,7 +44,7 @@ final class Tests: XCTestCase {
         let target = message.data(using: .utf8)
         let string = "HxiGFNiorX73hvb"
         
-        let decode = try! Base58Plus.decode(string)
+        let decode: Data = try! Base58Plus.decode(string)
         
         XCTAssertEqual(decode, target)
     }
