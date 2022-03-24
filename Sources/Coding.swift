@@ -31,6 +31,11 @@ public protocol Base58PlusEncoding {
     /// - Parameter data: Input Data bytes
     /// - Returns: Base58+ Encoded String
     static func encode(_ data: Data) -> String
+    
+    /// Encode String to Base58+ String
+    /// - Parameter data: Input String
+    /// - Returns: Base58+ Encoded String
+    static func encode(_ string: String) -> String
 }
 
 /// Base58+ Decoding Protocol
@@ -39,6 +44,11 @@ public protocol Base58PlusDecoding {
     /// - Parameter string: Input Base58+ encoded string
     /// - Returns: Decoded bytes
     static func decode(_ string: String) throws -> Data
+    
+    /// Decode a Base58+ String to String
+    /// - Parameter string: Input Base58+ encoded string
+    /// - Returns: Decoded String
+    static func decode(_ string: String) throws -> String
 }
 
 /// Base58+ Coding Protocol

@@ -61,6 +61,13 @@ extension Base58Plus: Base58PlusEncoding {
 
         return String(bytes: answer, encoding: .utf8)!
     }
+    
+    /// Encode String to Base58+ String
+    /// - Parameter data: Input String
+    /// - Returns: Base58+ Encoded String
+    public static func encode(_ string: String) -> String {
+        return encode(string.data(using: .utf8)!)
+    }
 }
 
 // MARK: - Decoding
@@ -85,5 +92,12 @@ extension Base58Plus: Base58PlusDecoding {
         let leadingOnes = stringBytes.prefix(while: { value in value == Self.alphabetBytes[0]})
         let leadingZeros = Data(repeating: 0, count: leadingOnes.count)
         return leadingZeros + bytes
+    }
+    
+    /// Decode a Base58+ String to String
+    /// - Parameter string: Input Base58+ encoded string
+    /// - Returns: Decoded String
+    public static func decode(_ string: String) throws -> String {
+        return String(decoding: try! decode(string), as: UTF8.self)
     }
 }
