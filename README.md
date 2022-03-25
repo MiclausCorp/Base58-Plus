@@ -24,13 +24,11 @@ print(encode) // 72k1xXWG59fYdzSNoA
 
 #### Decoding a string
 ```swift
-let encode = "72k1xXWG59fYdzSNoA"
+let message = "72k1xXWG59fYdzSNoA"
 
-let decode = Base58Plus.decode(encode)
+let decode = Base58Plus.decode(message)
 print(decode) // Hello, World!
 ```
 
 ## License
 [MIT License](LICENSE)
-
-Notice: Base58+™ is a of Miclaus Industries Corporation B.V., registered in the United States and other countries.
